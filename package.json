@@ -49,7 +49,6 @@
   },
   "homepage": "https://github.com/IcarusImageJu/shaper#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
   "devDependencies": {
