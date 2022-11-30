@@ -1,13 +1,12 @@
 {
   "name": "@julienbonteweb/shaper",
-  "version": "0.3.1",
+  "version": "0.3.0",
   "description": "test",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
   "react-native": "src/index",
   "source": "src/index",
-  "private": "false",
   "files": [
     "src",
     "lib",
@@ -49,6 +48,7 @@
   },
   "homepage": "https://github.com/IcarusImageJu/shaper#readme",
   "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
   "devDependencies": {
