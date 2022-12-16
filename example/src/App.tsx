@@ -1,15 +1,16 @@
-import * as React from 'react';
-
+import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import Shaper from 'shaper';
+import Shaper from '@julienbonteweb/shaper';
 
-export default function App() {
+const App = () => {
   return (
     <View style={styles.container}>
       <Shaper />
     </View>
   );
-}
+};
+
+export default App;
 
 const styles = StyleSheet.create({
   container: {

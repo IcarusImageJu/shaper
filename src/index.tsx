@@ -4,7 +4,7 @@ import type { ShaperTheme } from './models';
 
 export type ShaperProps = {
   colorScheme?: string[];
-  theme?: ShaperTheme;
+  theme?: ShaperTheme[];
   tileSize?: number;
 };
 

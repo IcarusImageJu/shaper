@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "shaper": ["./src/index"]
+      "@julienbonteweb/shaper": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
