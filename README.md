@@ -5,17 +5,21 @@ Create background with basic shapes
 ## Installation
 
 ```sh
-npm install shaper
+npm install @julienbonteweb/shaper
+```
+
+```sh
+yarn add @julienbonteweb/shaper
 ```
 
 ## Usage
 
 ```js
-import { multiply } from 'shaper';
+import Shaper from '@julienbonteweb/shaper';
 
 // ...
 
-const result = await multiply(3, 7);
+<Shaper tileSize={50} />
 ```
 
 ## Contributing
