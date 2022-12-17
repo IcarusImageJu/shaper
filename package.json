@@ -156,5 +156,8 @@
       "module",
       "typescript"
     ]
+  },
+  "dependencies": {
+    "react-native-svg": "^13.6.0"
   }
 }

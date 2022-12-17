@@ -1,2 +1,2 @@
-export const defaultColor = 'black';
+export const defaultShapeColor = 'black';
 export const defaultBackgroundColor = 'transparent';

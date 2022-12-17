@@ -1,8 +1,8 @@
 import React from 'react';
-import Shaper from '@julienbonteweb/shaper';
+import Shaper, { ShapeName } from '@julienbonteweb/shaper';
 
 const App = () => {
-  return <Shaper tileSize="3rem" />;
+  return <Shaper tileSize={50} blackList={[ShapeName.Dot]} />;
 };
 
 export default App;
