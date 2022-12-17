@@ -14,4 +14,5 @@ export type ShaperProps = {
   theme?: ShaperTheme[];
   tileSize?: number;
   blackList?: ShapeName[];
+  selection?: ShapeName[];
 };
