@@ -12,4 +12,5 @@ export enum ShapeName {
   Square = 'Square',
   Triangle = 'Triangle',
   Dot = 'Dot',
+  Bridge = 'Bridge',
 }

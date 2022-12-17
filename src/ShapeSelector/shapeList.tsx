@@ -5,6 +5,7 @@ import Circle from '../shapes/Circle';
 import { ShapeName, ShapeSelect } from './models';
 import Triangle from '../shapes/Triangle';
 import Dot from '../shapes/Dot';
+import Bridge from '../shapes/Bridge';
 
 export const shapeList: ShapeSelect[] = [
   {
@@ -26,5 +27,10 @@ export const shapeList: ShapeSelect[] = [
     name: ShapeName.Dot,
     shape: (props) => <Dot {...props} />,
     theme: [ShaperTheme.Basic, ShaperTheme.Nature],
+  },
+  {
+    name: ShapeName.Bridge,
+    shape: (props) => <Bridge {...props} />,
+    theme: [ShaperTheme.Nature, ShaperTheme.Basic],
   },
 ];
