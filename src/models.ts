@@ -3,7 +3,7 @@ import type { ShapeName } from './ShapeSelector/models';
 export enum ShaperTheme {
   Nature = 'NATURE',
   Basic = 'BASIC',
-  Digital = 'DIGITAL',
+  Tech = 'TECH',
   All = 'All',
 }
 
