@@ -37,6 +37,6 @@ export const shapeList: ShapeSelect[] = [
   {
     name: ShapeName.Rectangle,
     shape: (props) => <Rectangle {...props} />,
-    theme: [ShaperTheme.Basic],
+    theme: [ShaperTheme.Basic, ShaperTheme.Digital],
   },
 ];

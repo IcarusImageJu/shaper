@@ -10,6 +10,7 @@ const Bridge: FC<Shape> = ({ children: _children, ...rest }) => {
   const index = randomIntFromInterval(0, 3);
   const hole = randomIntFromInterval(1, 2);
   const position = randomIntFromInterval(1, 2);
+  const height = randomIntFromInterval(1, 2);
   return (
     <StyledBridge {...rest} index={index}>
       <StyledBridgeShape viewBox="0 0 100 100" preserveAspectRatio="true">
@@ -28,9 +29,9 @@ const Bridge: FC<Shape> = ({ children: _children, ...rest }) => {
         <rect
           fill={rest.shapeColor || defaultShapeColor}
           x={0}
-          y={50}
+          y={height === 1 ? 50 : 0}
           width={100}
-          height={50}
+          height={50 * height}
           mask={`url(#hole${hole})`}
         />
       </StyledBridgeShape>
