@@ -12,7 +12,9 @@ export const useShaperQty = ({ tileSize = defaultTileSize }: ShaperProps) => {
   const calcQty: MeasureOnSuccessCallback = useCallback(
     (_x, _y, width, height) => {
       const area = width * height;
-      const res = Math.floor(area / (tileSize * tileSize));
+      const res = Math.floor(
+        area / (tileSize * tileSize) + (width * 2) / tileSize
+      );
       setQty(res > 1 ? res : 1);
     },
     [tileSize]

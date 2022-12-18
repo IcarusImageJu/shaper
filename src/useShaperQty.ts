@@ -9,16 +9,14 @@ export const useShaperQty = ({ tileSize = defaultTileSize }: ShaperProps) => {
   const throttleInProgress = useRef(false);
 
   const calcQty = useCallback(() => {
-    if (ref.current) {
-      const parent = ref.current;
+    const parent = ref.current;
+    if (parent) {
       // take variation from the grid parent
-      const firstChild = parent.children[0];
       let size = tileSize;
-      if (firstChild) {
-        size = firstChild.clientWidth;
-      }
-      const area = ref.current.clientWidth * ref.current.clientHeight;
-      const res = Math.floor(area / (size * size) + parent.clientWidth / size);
+      const area = parent.clientWidth * parent.clientHeight;
+      const res = Math.floor(
+        area / (size * size) + (parent.clientWidth * 2) / size
+      );
       setQty(res);
     }
   }, [tileSize]);
