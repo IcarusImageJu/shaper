@@ -9,8 +9,8 @@ export enum ShaperTheme {
 
 export type ShaperProps = {
   colorScheme?: {
-    backgroundColor: string[];
-    shapeColor: string[];
+    backgroundColor?: string[];
+    shapeColor?: string[];
   };
   theme?: ShaperTheme[];
   tileSize?: number;

@@ -18,7 +18,7 @@ export const useShaperQty = ({ tileSize = defaultTileSize }: ShaperProps) => {
         size = firstChild.clientWidth;
       }
       const area = ref.current.clientWidth * ref.current.clientHeight;
-      const res = Math.floor(area / (size * size));
+      const res = Math.floor(area / (size * size) + parent.clientWidth / size);
       setQty(res);
     }
   }, [tileSize]);

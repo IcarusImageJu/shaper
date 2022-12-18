@@ -15,7 +15,7 @@ const ShapeSelector: FC<ShaperProps & { qty: number }> = ({
   return (
     <>
       {Array.from(Array(qty).keys()).map((key) => (
-        <ShapeRandomizer key={key} shapes={shapes} />
+        <ShapeRandomizer {...rest} key={key} shapes={shapes} />
       ))}
     </>
   );

@@ -10,7 +10,7 @@ export const RectangleStyled = styled(Span)<
   width: 100%;
   aspect-ratio: 1;
   transform: ${(props) => `rotate(${props.rotation * 90}deg)`};
-  backgroundcolor: ${(props) =>
+  background-color: ${(props) =>
     props.backgroundColor || defaultBackgroundColor};
 `;
 

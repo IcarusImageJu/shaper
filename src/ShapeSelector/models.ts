@@ -1,9 +1,10 @@
 import type { FC } from 'react';
+import type { Shape } from '../shapes/models';
 import type { ShaperTheme } from '../models';
 
 export type ShapeSelect = {
   name: ShapeName;
-  shape: FC;
+  shape: FC<Shape>;
   theme: ShaperTheme[];
 };
 
