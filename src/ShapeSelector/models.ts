@@ -15,4 +15,5 @@ export enum ShapeName {
   Bridge = 'Bridge',
   Rectangle = 'Rectangle',
   Ring = 'Ring',
+  Spike = 'Spike',
 }

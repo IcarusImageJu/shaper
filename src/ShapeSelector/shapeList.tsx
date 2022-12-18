@@ -8,6 +8,7 @@ import Dot from '../shapes/Dot';
 import Bridge from '../shapes/Bridge';
 import Rectangle from '../shapes/Rectangle';
 import Ring from '../shapes/Ring';
+import Spike from '../shapes/Spike';
 
 export const shapeList: ShapeSelect[] = [
   {
@@ -44,5 +45,10 @@ export const shapeList: ShapeSelect[] = [
     name: ShapeName.Ring,
     shape: (props) => <Ring {...props} />,
     theme: [ShaperTheme.Basic],
+  },
+  {
+    name: ShapeName.Spike,
+    shape: (props) => <Spike {...props} />,
+    theme: [ShaperTheme.Basic, ShaperTheme.Nature],
   },
 ];
