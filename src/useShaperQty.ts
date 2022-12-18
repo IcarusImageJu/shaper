@@ -9,7 +9,11 @@ export const useShaperQty = ({ tileSize = defaultTileSize }: ShaperProps) => {
   const throttleInProgress = useRef(false);
 
   const calcQty = useCallback(() => {
-    const parent = ref.current;
+    // Have to type because of tsconfig not including "DOM" lib
+    // can't include DOM Lib because it brokes too much other stuff than just this line
+    const parent = ref.current as
+      | { clientWidth: number; clientHeight: number }
+      | undefined;
     if (parent) {
       // take variation from the grid parent
       let size = tileSize;

@@ -13,7 +13,6 @@ const ShapeRandomizer: FC<ShaperProps & { shapes: ShapeSelect[] }> = ({
     shapes,
     ...rest,
   });
-  console.log(shapeColor);
 
   return <Shape shapeColor={shapeColor} backgroundColor={backgroundColor} />;
 };
