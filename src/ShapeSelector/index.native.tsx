@@ -17,7 +17,7 @@ const ShapeSelector: FC<ShaperProps & { qty: number }> = ({
     <>
       {Array.from(Array(qty).keys()).map((key) => (
         <Span key={key} style={{ width: tileSize }}>
-          <ShapeRandomizer shapes={shapes} />
+          <ShapeRandomizer {...rest} tileSize={tileSize} shapes={shapes} />
         </Span>
       ))}
     </>

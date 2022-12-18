@@ -17,4 +17,9 @@ export enum ShapeName {
   Rectangle = 'Rectangle',
   Ring = 'Ring',
   Spike = 'Spike',
+  Mountains = 'Mountains',
+  Feather = 'Feather',
+  Seed = 'Seed',
+  Ramp = 'Ramp',
+  Water = 'Water',
 }

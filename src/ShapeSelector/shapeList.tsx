@@ -9,6 +9,10 @@ import Bridge from '../shapes/Bridge';
 import Rectangle from '../shapes/Rectangle';
 import Ring from '../shapes/Ring';
 import Spike from '../shapes/Spike';
+import Mountains from '../shapes/Mountains';
+import Ramp from '../shapes/Ramp';
+import Feather from '../shapes/Feather';
+import Seed from '../shapes/Seed';
 
 export const shapeList: ShapeSelect[] = [
   {
@@ -19,7 +23,7 @@ export const shapeList: ShapeSelect[] = [
   {
     name: ShapeName.Square,
     shape: (props) => <Square {...props} />,
-    theme: [ShaperTheme.Basic],
+    theme: [ShaperTheme.Basic, ShaperTheme.Tech],
   },
   {
     name: ShapeName.Triangle,
@@ -44,11 +48,31 @@ export const shapeList: ShapeSelect[] = [
   {
     name: ShapeName.Ring,
     shape: (props) => <Ring {...props} />,
-    theme: [ShaperTheme.Basic],
+    theme: [ShaperTheme.Basic, ShaperTheme.Tech],
   },
   {
     name: ShapeName.Spike,
     shape: (props) => <Spike {...props} />,
     theme: [ShaperTheme.Basic, ShaperTheme.Nature],
+  },
+  {
+    name: ShapeName.Mountains,
+    shape: (props) => <Mountains {...props} />,
+    theme: [ShaperTheme.Nature],
+  },
+  {
+    name: ShapeName.Ramp,
+    shape: (props) => <Ramp {...props} />,
+    theme: [ShaperTheme.Basic],
+  },
+  {
+    name: ShapeName.Feather,
+    shape: (props) => <Feather {...props} />,
+    theme: [ShaperTheme.Nature],
+  },
+  {
+    name: ShapeName.Seed,
+    shape: (props) => <Seed {...props} />,
+    theme: [ShaperTheme.Nature, ShaperTheme.Basic],
   },
 ];

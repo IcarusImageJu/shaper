@@ -3,21 +3,21 @@ import type { FC } from 'react';
 import Svg, { Polygon } from 'react-native-svg';
 import type { Shape } from '../models';
 import { randomIntFromInterval } from '../../utils';
-import { StyledSpike } from './styles';
 import { defaultShapeColor } from '../constants';
+import { StyledMountains } from './styles';
 
-const Spike: FC<Shape> = ({ children: _children, ...rest }) => {
-  const index = randomIntFromInterval(0, 3);
+const Mountains: FC<Shape> = ({ children: _children, ...rest }) => {
+  const index = randomIntFromInterval(0, 1);
   return (
-    <StyledSpike index={index} {...rest}>
+    <StyledMountains index={index} {...rest}>
       <Svg viewBox="0 0 100 100">
         <Polygon
-          points="0,0 0,100 100,50"
+          points="0,100 100,100 75,0 50,50 25,25"
           fill={rest.shapeColor || defaultShapeColor}
         />
       </Svg>
-    </StyledSpike>
+    </StyledMountains>
   );
 };
 
-export default Spike;
+export default Mountains;

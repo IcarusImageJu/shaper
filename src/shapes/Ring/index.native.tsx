@@ -6,7 +6,7 @@ import { randomIntFromInterval } from '../../utils';
 import { StyledRing } from './styles';
 import { defaultShapeColor } from '../constants';
 
-const Triangle: FC<Shape> = ({ children: _children, ...rest }) => {
+const Ring: FC<Shape> = ({ children: _children, ...rest }) => {
   const hole = randomIntFromInterval(1, 4);
   const ring = randomIntFromInterval(1, 2);
 
@@ -34,4 +34,4 @@ const Triangle: FC<Shape> = ({ children: _children, ...rest }) => {
   );
 };
 
-export default Triangle;
+export default Ring;
