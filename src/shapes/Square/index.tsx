@@ -3,7 +3,7 @@ import type { FC } from 'react';
 import type { Shape } from '../models';
 import { StyledSquare } from './styles';
 
-const Square: FC<Shape> = ({ children: _children, ...rest }) => {
+const Square: FC<Shape> = ({ ...rest }) => {
   return <StyledSquare {...rest} />;
 };
 

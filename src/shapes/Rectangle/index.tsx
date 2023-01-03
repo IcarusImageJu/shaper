@@ -1,12 +1,14 @@
 import React from 'react';
 import type { FC } from 'react';
-import { randomIntFromInterval } from '../../utils';
 import type { Shape } from '../models';
 import { RectangleShapeStyled, RectangleStyled } from './styles';
+import Chance from 'chance';
+import { defaultSeed } from '../../constants';
 
-const Rectangle: FC<Shape> = ({ children: _children, ...rest }) => {
-  const rotation = randomIntFromInterval(0, 3);
-  const ratio = randomIntFromInterval(1, 3);
+const Rectangle: FC<Shape> = ({ seed = defaultSeed, ...rest }) => {
+  const chance = new Chance(seed.join());
+  const rotation = chance.integer({ min: 0, max: 3 });
+  const ratio = chance.integer({ min: 1, max: 3 });
 
   return (
     <RectangleStyled {...rest} rotation={rotation} ratio={ratio}>

@@ -1,20 +1,15 @@
 import React from 'react';
-import Shaper from '@julienbonteweb/shaper';
+import Shaper, { ShaperTheme } from '@julienbonteweb/shaper';
 
 const App = () => {
   return (
     <Shaper
-      tileSize={50}
-      // selection={[ShapeName.Feather]}
+      tileSize={150}
+      seed={['demo']}
+      loss={30}
+      theme={[ShaperTheme.Basic]}
       colorScheme={{
-        shapeColor: ['#F0EAD2', '#DDE5B6', '#ADC178', '#A98467', '#6C584C'],
-        backgroundColor: [
-          '#F0EAD2',
-          '#DDE5B6',
-          '#ADC178',
-          '#A98467',
-          '#6C584C',
-        ],
+        shapeColor: ['#F0EAD2', '#DDE5B6'],
       }}
     />
   );

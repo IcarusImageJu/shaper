@@ -1,13 +1,15 @@
 import React from 'react';
 import type { FC } from 'react';
 import type { Shape } from '../models';
-import { randomIntFromInterval } from '../../utils';
 import { defaultShapeColor } from '../constants';
 import { StyledMountains, StyledMountainsShape } from './styles';
 import { Polygon } from '../../tags';
+import Chance from 'chance';
+import { defaultSeed } from '../../constants';
 
-const Mountains: FC<Shape> = ({ children: _children, ...rest }) => {
-  const index = randomIntFromInterval(0, 1);
+const Mountains: FC<Shape> = ({ seed = defaultSeed, ...rest }) => {
+  const chance = new Chance(seed.join);
+  const index = chance.integer({ min: 0, max: 1 });
   return (
     <StyledMountains index={index} {...rest}>
       <StyledMountainsShape viewBox="0 0 100 100">

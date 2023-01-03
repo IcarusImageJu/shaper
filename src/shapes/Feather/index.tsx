@@ -1,13 +1,15 @@
 import React from 'react';
 import type { FC } from 'react';
 import type { Shape } from '../models';
-import { randomIntFromInterval } from '../../utils';
 import { defaultShapeColor } from '../constants';
 import { StyledFeather, StyledFeatherShape } from './styles';
 import { Circle, Defs, Mask, Polygon, Rect } from '../../tags';
+import Chance from 'chance';
+import { defaultSeed } from '../../constants';
 
-const Feather: FC<Shape> = ({ children: _children, ...rest }) => {
-  const index = randomIntFromInterval(0, 1);
+const Feather: FC<Shape> = ({ seed = defaultSeed, ...rest }) => {
+  const chance = new Chance(seed.join());
+  const index = chance.integer({ min: 0, max: 1 });
   return (
     <StyledFeather index={index} {...rest}>
       <StyledFeatherShape viewBox="0 0 100 100">

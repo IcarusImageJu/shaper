@@ -1,15 +1,17 @@
 import React from 'react';
 import type { FC } from 'react';
 import type { Shape } from '../models';
-import { randomIntFromInterval } from '../../utils';
 import { StyledBridge, StyledBridgeShape } from './styles';
 import { defaultShapeColor } from '../constants';
 import { Circle, Defs, Mask, Rect } from '../../tags';
+import Chance from 'chance';
+import { defaultSeed } from '../../constants';
 
-const Bridge: FC<Shape> = ({ children: _children, ...rest }) => {
-  const index = randomIntFromInterval(0, 3);
-  const hole = randomIntFromInterval(1, 2);
-  const position = randomIntFromInterval(1, 2);
+const Bridge: FC<Shape> = ({ seed = defaultSeed, ...rest }) => {
+  const chance = new Chance(seed.join);
+  const index = chance.integer({ min: 0, max: 3 });
+  const hole = chance.integer({ min: 1, max: 2 });
+  const position = chance.integer({ min: 1, max: 2 });
   return (
     <StyledBridge index={index} {...rest}>
       <StyledBridgeShape viewBox="0 0 100 100">

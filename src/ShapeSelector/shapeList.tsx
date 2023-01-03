@@ -13,6 +13,7 @@ import Mountains from '../shapes/Mountains';
 import Ramp from '../shapes/Ramp';
 import Feather from '../shapes/Feather';
 import Seed from '../shapes/Seed';
+import Lost from '../shapes/Lost';
 
 export const shapeList: ShapeSelect[] = [
   {
@@ -75,4 +76,5 @@ export const shapeList: ShapeSelect[] = [
     shape: (props) => <Seed {...props} />,
     theme: [ShaperTheme.Nature, ShaperTheme.Basic],
   },
+  { name: ShapeName.Lost, shape: () => <Lost />, theme: [] },
 ];

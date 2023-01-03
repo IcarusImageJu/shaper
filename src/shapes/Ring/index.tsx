@@ -1,14 +1,17 @@
 import React from 'react';
 import type { FC } from 'react';
 import type { Shape } from '../models';
-import { randomIntFromInterval } from '../../utils';
 import { StyledRing, StyledRingShape } from './styles';
 import { defaultShapeColor } from '../constants';
 import { Circle, Defs, Mask, Rect } from '../../tags';
+import Chance from 'chance';
+import { defaultSeed } from '../../constants';
 
-const Ring: FC<Shape> = ({ children: _children, ...rest }) => {
-  const hole = randomIntFromInterval(1, 4);
-  const ring = randomIntFromInterval(1, 2);
+const Ring: FC<Shape> = ({ seed = defaultSeed, ...rest }) => {
+  const chance = new Chance(seed.join());
+
+  const hole = chance.integer({ min: 1, max: 4 });
+  const ring = chance.integer({ min: 1, max: 2 });
 
   const calcRing = (50 / 2) * ring;
   const calcHole = (25 / 4) * hole;

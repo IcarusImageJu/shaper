@@ -7,14 +7,22 @@ import { useShapeRandomizer } from './useShapeRandomizer';
 
 const ShapeRandomizer: FC<ShaperProps & { shapes: ShapeSelect[] }> = ({
   shapes = [],
+  seed,
   ...rest
 }) => {
   const { Shape, shapeColor, backgroundColor } = useShapeRandomizer({
     shapes,
+    seed,
     ...rest,
   });
 
-  return <Shape shapeColor={shapeColor} backgroundColor={backgroundColor} />;
+  return (
+    <Shape
+      shapeColor={shapeColor}
+      backgroundColor={backgroundColor}
+      seed={seed}
+    />
+  );
 };
 
 export default ShapeRandomizer;

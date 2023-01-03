@@ -22,4 +22,5 @@ export enum ShapeName {
   Seed = 'Seed',
   Ramp = 'Ramp',
   Water = 'Water',
+  Lost = 'Lost',
 }

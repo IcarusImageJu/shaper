@@ -1,13 +1,15 @@
 import React from 'react';
 import type { FC } from 'react';
 import type { Shape } from '../models';
-import { randomIntFromInterval } from '../../utils';
 import { defaultShapeColor } from '../constants';
 import { StyledRamp, StyledRampShape } from './styles';
 import { Circle, Defs, Mask, Rect } from '../../tags';
+import Chance from 'chance';
+import { defaultSeed } from '../../constants';
 
-const Ramp: FC<Shape> = ({ children: _children, ...rest }) => {
-  const index = randomIntFromInterval(0, 3);
+const Ramp: FC<Shape> = ({ seed = defaultSeed, ...rest }) => {
+  const chance = new Chance(seed.join());
+  const index = chance.integer({ min: 0, max: 3 });
 
   return (
     <StyledRamp index={index} {...rest}>
