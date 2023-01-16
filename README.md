@@ -19,7 +19,14 @@ import Shaper from '@julienbonteweb/shaper';
 
 // ...
 
-<Shaper tileSize={50} />
+<Shaper
+    tileSize={50} seed={['demo']}
+    loss={30}
+    theme={[ShaperTheme.Basic]}
+    colorScheme={{
+    shapeColor: ['#F0EAD2', '#DDE5B6'],
+    }}
+    />
 ```
 
 ## Contributing
