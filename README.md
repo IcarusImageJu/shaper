@@ -1,20 +1,25 @@
-# shaper
 
-Create background with basic shapes
+# Shaper
+
+Create background with basic shapes for cross platform with React Native
+
+
 
 ## Installation
 
-```sh
-npm install @julienbonteweb/shaper
+Install my-project with npm
+
+```bash
+  npm install @julienbonteweb/shaper
 ```
-
-```sh
-yarn add @julienbonteweb/shaper
+or
+```bash
+  yarn add @julienbonteweb/shaper
 ```
+    
+## Usage/Examples
 
-## Usage
-
-```js
+```typescript
 import Shaper from '@julienbonteweb/shaper';
 
 // ...
@@ -27,7 +32,18 @@ import Shaper from '@julienbonteweb/shaper';
     shapeColor: ['#F0EAD2', '#DDE5B6'],
     }}
     />
+
 ```
+
+
+## Roadmap
+
+- Add more shapes
+- Add more grid option
+- Add image with mask option
+- Add tests
+- Add a lot of optimization (currently it is a bit ... heavy for not so much)
+
 
 ## Contributing
 
