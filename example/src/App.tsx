@@ -5,7 +5,7 @@ const App = () => {
   return (
     <Shaper
       tileSize={150}
-      seed={['demo']}
+      seed={['Julien']}
       loss={30}
       theme={[ShaperTheme.Basic]}
       colorScheme={{
